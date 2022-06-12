@@ -23,3 +23,10 @@ jobs:
         env:
           # for uploading coverage reports
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+        with:
+          repository: ko-redtruck/SqueakJS
+          # Relative path under $GITHUB_WORKSPACE to place the repository
+          path: SqueakJS
+      - run: ls -laR 
+      - run: env
