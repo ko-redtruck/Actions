@@ -31,7 +31,7 @@ jobs:
       - run: ls -laR 
       - run: env
       - run: ls -laR $SMALLTALK_CI_HOME
-      - run: cp $SMALLTALK_CI_HOME/_builds/*/TravisCI.* ./SqueakJS/
+      - run: cp $SMALLTALK_CI_BUILD/TravisCI.* ./SqueakJS/
       - run: ls ./SqueakJS
       - uses: amondnet/vercel-action@v20 #deploy
         with:
