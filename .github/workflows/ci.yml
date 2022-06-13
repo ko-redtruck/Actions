@@ -30,7 +30,7 @@ jobs:
           path: SqueakJS
       - run: ls -laR 
       - run: env
-      - run: cp SMALLTALK_CI_HOME/_builds/*/TravisCI.* ./SqueakJS/
+      - run: cp $SMALLTALK_CI_HOME/_builds/*/TravisCI.* ./SqueakJS/
       - run: ls ./SqueakJS
       - uses: amondnet/vercel-action@v20 #deploy
         with:
