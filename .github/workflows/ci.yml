@@ -4,17 +4,14 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: $os
-    env: 
-      os: ubuntu-latest
-      smalltalk_image : Squeak64-5.3 
-    name: publish branch with $smalltalk_image on $os
+    runs-on: ubuntu-latest
+    name: Publish browser branch preview
     steps:
       - uses: actions/checkout@v2
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
-          smalltalk-image: $smalltalk_image
-      - run: smalltalkci -s $smalltalk_image || true
+          smalltalk-image: Squeak64-5.3
+      - run: smalltalkci -s $smalltalk-image || true
         shell: bash
         timeout-minutes: 15
         env:
