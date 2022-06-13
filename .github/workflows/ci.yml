@@ -11,7 +11,7 @@ jobs:
       - uses: hpi-swa/setup-smalltalkCI@v1
         with:
           smalltalk-image: Squeak64-5.3
-      - run: smalltalkci -s $smalltalk-image || true
+      - run: smalltalkci -s 'Squeak64-5.3' || true
         shell: bash
         timeout-minutes: 15
         env:
